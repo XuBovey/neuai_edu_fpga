@@ -34,7 +34,7 @@ always @(posedge w_clk_1ms or negedge w_rst) begin
         if (r_cnt_1ms == 999)
             r_cnt_1ms <= 0;
         else
-            r_cnt_1ms <= r_cnt_1ms + 1;
+            r_cnt_1ms <= r_cnt_1ms + 1'b1;
     end
 end
 
@@ -46,7 +46,7 @@ always @(posedge w_clk_1us or negedge w_rst) begin
         if (r_cnt_1us == 999)
             r_cnt_1us <= 0;
         else
-            r_cnt_1us <= r_cnt_1us + 1;
+            r_cnt_1us <= r_cnt_1us + 1'b1;
     end
 end
 
