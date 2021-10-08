@@ -66,12 +66,11 @@ always @(posedge clk) begin
     else begin
         if(r_bitcnt == 3'd0) 
             r_dataToSendBuf <= dataToSend;
-        else begin
+        else
             // 脉冲有效信号只会出现一个时钟周期，请分析原因
             // 下降沿输出数据
             if(w_sck_negedge) 
                 r_dataToSendBuf <= {r_dataToSendBuf[6:0], 1'b0}; // 数据左移，低位补零
-        end
     end
 end
 
